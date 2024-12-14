@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script type="module" defer src="./js/index.js"></script>
+
+  <title>Shivalik Wave</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <button id="screenshot" style="display: none;">ScreenShot</button>
+      <div class="nav">
+        <div class="nav-logo">
+          <img src="./assets/svg/logo-new.svg" alt="Logo" class="logo">
+        </div>
+      </div>
+
+      <div class="options">
+        <h3>Choose View</h3>
+        <label class="radio-label">
+          <input type="radio" name="view" value="3d" checked id="radio-3d">
+          <span class="radio-text">3D Model</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="view" value="2d" id="radio-2d">
+          <span class="radio-text">2D Image</span>
+        </label>
+      </div>
+
+      <div class="floors">
+        <h3>Floors</h3>
+        <p>Floor <span id="floorNumber">1</span></p>
+        <input type="range" min="1" max="30" value="1" id="floorSlider">
+      </div>
+
+      <div class="modify">
+        <h3>Modify</h3>
+        <label id="grillSection" class="checkbox-label disabled">
+          <input type="checkbox" id="grillCheckbox" name="grill" value="grill" disabled>
+          <span class="checkbox-text">Apply Grills</span>
+        </label>
+        <label id="glassSection" class="checkbox-label disabled">
+          <input type="checkbox" id="glassCheckbox" name="glass" value="glass" disabled>
+          <span class="checkbox-text">Apply Glass</span>
+        </label>
+        <label id="accessorySection" class="checkbox-label disabled">
+          <input type="checkbox" id="accessoryCheckbox" name="accessory" value="accessory" disabled>
+          <span class="checkbox-text">Apply Accessories</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <div id="loader" class="loader"></div>
+      <div id="2d-scene" class="screenshot-container">
+        <img src="./assets/images/shivalik-wave/floor_1.png" alt="Screenshot" id="screenshot-image"
+          class="screenshot-image">
+      </div>
+      <canvas id="3d-scene" class="scene"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
